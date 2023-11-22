@@ -1,0 +1,10 @@
+.cart-footer {
+  margin-top: 10px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  &__total {
+    display: flex;
+    align-items: center;
+  }
+}
