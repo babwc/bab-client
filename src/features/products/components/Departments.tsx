@@ -26,7 +26,6 @@ const DepartmentList = ({
   const location = useLocation();
 
   const { data } = useGetDepartmentsQuery(undefined);
-  console.log(data);
 
   useEffect(() => {
     if (data) {
