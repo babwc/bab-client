@@ -1,5 +1,7 @@
 .product {
   height: 100%;
+  width: 100%;
+  background-color: red;
   display: flex;
   box-sizing: border-box;
 }
@@ -23,6 +25,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  text-transform: capitalize;
 }
 
 .product__descr__icon--mobile {
@@ -112,12 +115,14 @@
 @media screen and (max-width: 980px) {
   .product__img {
     height: calc(100% - 70px - 200px);
-    width: 100%;
+    width: calc(100% - 10px);
   }
   .product__name--mobile {
     display: flex;
   }
   .product {
+    padding: 0 5px;
+    box-sizing: border-box;
     flex-direction: column;
   }
   .product__name {
