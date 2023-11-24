@@ -165,7 +165,7 @@ const CateringForm = () => {
               name="message"
               isTextarea={true}
               value={value.message}
-              error={value.message}
+              error={error.message}
               handleChange={handleChange}
               handleFocus={handleFocus}
             />

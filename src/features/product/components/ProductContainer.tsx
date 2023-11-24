@@ -41,7 +41,6 @@ export const ProductContainer = () => {
 
   const { title, description, image, price, inStock, amount } =
     data.content || {};
-  console.log(amount);
 
   return data.content ? (
     <>
