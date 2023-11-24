@@ -14,13 +14,13 @@ import "./style.scss";
 const Nav = () => {
   const location = useLocation();
 
-  const [navMenu, setNavMenu] = useState([
+  const navMenu = [
     "",
-    "market",
+    // "market",
     "catering",
     "contact",
     "cafe",
-  ]);
+  ];
 
   const { ref, style, isOpen, handleState: handleMenu } = useRollDown();
 
