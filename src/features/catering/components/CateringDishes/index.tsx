@@ -19,8 +19,6 @@ const CateringDishes = () => {
   });
 
   useEffect(() => {
-    console.log(cateringCtg.data);
-
     if (cateringCtg.data?.content) {
       setCurrentCategory(cateringCtg.data?.content[0]?.id);
     }

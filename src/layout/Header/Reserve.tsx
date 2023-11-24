@@ -31,7 +31,6 @@ const Reserve = () => {
 
     if (!reservationOpen) ref.current = null;
   }, [reservationOpen]);
-  console.log(ref.current);
 
   if (!reservations) return null;
 
