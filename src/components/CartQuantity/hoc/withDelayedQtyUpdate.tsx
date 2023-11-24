@@ -16,6 +16,7 @@ const withDelayedQtyUpdate = <T,>(
     setQuantity: Dispatch<SetStateAction<number>>;
   }) => {
     const handleQuantity = (operator: Operator) => {
+      return false;
       if (amount > quantity) {
         setQuantity(operator === Operator.Add ? quantity + 1 : quantity - 1);
       }

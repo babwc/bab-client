@@ -22,6 +22,8 @@ const withInstantQtyUpdate = <T,>(
     const { modifyCartData } = useCartData();
 
     const handleQuantity = (operator: Operator) => {
+      return false;
+
       if (amount > quantity) {
         modifyCartData(() => {
           storage.updateQuantity({
