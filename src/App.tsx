@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 
 import { useEffect } from "react";
@@ -66,6 +66,10 @@ const App = () => {
           <Notif />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route
+              path="/admin"
+              element={<Navigate to="https://www.babushkawc.com/" />}
+            />
             <Route path="/cart" element={<Cart />} />
             <Route path="/market" element={<Market />} />
             <Route path="/cafe" element={<Cafe />} />

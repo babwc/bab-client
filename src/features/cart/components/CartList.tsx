@@ -62,11 +62,13 @@ const CartList = ({
         })}
       </div>
 
-      <CartFooter
-        data={data.content}
-        items={cartData.items}
-        quantity={quantity}
-      />
+      {data?.content ? (
+        <CartFooter
+          data={data?.content}
+          items={cartData.items}
+          quantity={quantity}
+        />
+      ) : null}
     </>
   );
 };
