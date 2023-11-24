@@ -25,6 +25,7 @@ import useCartData from "./hooks/useCartData";
 import * as storage from "./utils/localStorage";
 
 import { Settings } from "./ts/types";
+import Admin from "./pages/Admin";
 
 const fallbackRender = ({ error, resetErrorBoundary }: any) => {
   return (
@@ -66,10 +67,7 @@ const App = () => {
           <Notif />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route
-              path="/admin"
-              element={<Navigate to="https://www.babushkawc.com/" />}
-            />
+            <Route path="/admin" element={<Admin />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/market" element={<Market />} />
             <Route path="/cafe" element={<Cafe />} />
