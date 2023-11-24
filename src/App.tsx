@@ -14,6 +14,7 @@ import Cart from "./pages/Cart";
 import Success from "./pages/Success";
 import Catering from "./pages/Catering";
 import Contact from "./pages/Contact";
+import Notif from "./components/Notif";
 import NotFound from "./pages/NotFound";
 import Footer from "./layout/Footer";
 
@@ -62,6 +63,7 @@ const App = () => {
       <main style={{ position: "relative" }}>
         <>
           <Header />
+          <Notif />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />

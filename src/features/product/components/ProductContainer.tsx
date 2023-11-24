@@ -39,7 +39,7 @@ export const ProductContainer = () => {
 
   if (isLoading) return <Loading />;
 
-  const { title, description, image, price, inStock, amount } =
+  const { title, description, image, price, discount, inStock, amount } =
     data.content || {};
 
   return data.content ? (
@@ -70,6 +70,7 @@ export const ProductContainer = () => {
             <div className="product__footer">
               <ProductFooterDetails
                 amount={amount}
+                discount={discount}
                 price={price}
                 quantity={currentQuantity}
                 setQuantity={setCurrentQuantity}

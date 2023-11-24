@@ -25,19 +25,29 @@ const CartFooter = ({
   const [datePickerOpen, setDatePickerOpen] = useState<boolean>(false);
   const [orderReadyDate, setOrderReadyDate] = useState("");
 
-  const getTotal = () => {
-    return data
-      .reduce((total: number, item: IProduct) => {
-        return (total += item.price * quantity[item.id]);
-      }, 0)
-      .toFixed(2);
+  const getTotal: any = () => {
+    return data.reduce(
+      (total: { price: number; discounted: number }, item: IProduct) => {
+        const price = item.price * quantity[item.id];
+
+        return {
+          price: (total.price += price),
+          discounted: item.discount
+            ? total.price - total.price * (item.discount / 100)
+            : 0,
+        };
+      },
+      { price: 0, discounted: 0 }
+    );
   };
 
   const settings = useGetSettingsQuery(undefined);
 
   if (settings.isLoading) return <Loading />;
 
-  const { orders } = settings.data.content || {};
+  const { orders } = settings.data?.content || {};
+
+  const { price, discounted } = getTotal();
 
   return (
     <>
@@ -58,7 +68,21 @@ const CartFooter = ({
           </h3>
         )}
         <div className="cart-footer__total">
-          <h3>Total: ${getTotal()}</h3>
+          <h3>
+            Total:{" "}
+            {discounted ? (
+              <>
+                <span className="cart-footer__total--old">
+                  ${price.toFixed(2)}
+                </span>{" "}
+                <span className="cart-footer__total--discounted">
+                  ${discounted.toFixed(2)}
+                </span>
+              </>
+            ) : (
+              price.toFixed(2)
+            )}
+          </h3>
         </div>
       </div>
 

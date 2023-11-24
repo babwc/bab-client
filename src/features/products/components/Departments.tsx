@@ -26,13 +26,14 @@ const DepartmentList = ({
   const location = useLocation();
 
   const { data } = useGetDepartmentsQuery(undefined);
+  console.log(data);
 
   useEffect(() => {
     if (data) {
       setCurrentDepartment(
         location.state?.title === "market"
-          ? data.content[1].title
-          : data.content[0].title
+          ? data.content[1]?.title
+          : data.content[0]?.title
       );
     }
   }, [data, location, setCurrentDepartment]);

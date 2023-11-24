@@ -6,5 +6,11 @@
   &__total {
     display: flex;
     align-items: center;
+    &--old {
+      text-decoration: line-through;
+    }
+    &--discounted {
+      color: #990000;
+    }
   }
 }

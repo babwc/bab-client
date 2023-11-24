@@ -12,6 +12,7 @@ export interface IProduct {
   description: string;
   image: any;
   modifiers: any;
+  discount: number;
   inStock: boolean;
   isModifier: boolean;
   popularity: number;

@@ -88,3 +88,23 @@ export const deleteProduct = (productId: any) => {
 export const clearCart = () => {
   window.localStorage.removeItem("cart");
 };
+
+export const getNotifConfig = () => {
+  const notif: any = window.localStorage.getItem("notif");
+
+  return JSON.parse(notif);
+};
+
+export const setNotifLimit = (updatedAt: any) => {
+  // const notif: any = window.localStorage.getItem("notif");
+
+  // const { isActive, updatedAt } = notif;
+
+  const notifData = { isActive: false, updatedAt };
+
+  window.localStorage.setItem("notif", JSON.stringify(notifData));
+};
+
+export const notifLimitRemove = () => {
+  window.localStorage.removeItem("notif");
+};

@@ -62,6 +62,7 @@ export const api = createApi({
     "CateringCategory",
     "User",
     "Cart",
+    "Notifs",
     "Order",
     "Reservation",
   ],
