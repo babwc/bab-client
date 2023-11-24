@@ -30,7 +30,7 @@ const Button = ({
       }`}
       disabled={disabled}
       style={additionalStyle}
-      onClick={handleClick}
+      onClick={() => !disabled && handleClick} // just in case
     >
       {children}
     </button>

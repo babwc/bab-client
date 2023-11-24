@@ -62,7 +62,8 @@ const ProductDetails = (
             ) : (
               <>
                 <Button
-                  disabled={!!storage.getItem(productId)}
+                  disabled={true}
+                  // disabled={!!storage.getItem(productId)}
                   handleClick={() => {
                     modifyCartData(() => {
                       return !!storage.getItem(productId)

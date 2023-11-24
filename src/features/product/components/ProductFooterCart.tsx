@@ -30,6 +30,7 @@ const ProductFooterCart = ({
         animScale={false}
         additionalStyle={{ ...btnStyle }}
         handleClick={handleClick}
+        disabled={true}
       >
         Add to cart
       </Button>
