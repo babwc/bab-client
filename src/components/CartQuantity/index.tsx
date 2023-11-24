@@ -8,7 +8,11 @@ import "./style.scss";
 
 import { CartQuantityProps } from "./ts/interfaces";
 
-const CartQuantity = ({ quantity, handleQuantity }: CartQuantityProps) => {
+const CartQuantity = ({
+  quantity,
+  handleQuantity,
+  reachedLimit,
+}: CartQuantityProps) => {
   const quantityMin = quantity === 1;
 
   const styleBtn = (input: boolean) => {
@@ -35,7 +39,7 @@ const CartQuantity = ({ quantity, handleQuantity }: CartQuantityProps) => {
       <Button
         additionalStyle={styleBtn(false)}
         handleClick={() => handleQuantity(Operator.Add)}
-        disabled={false}
+        disabled={reachedLimit}
       >
         <BiPlus size={20} color={"#fff"} />
       </Button>

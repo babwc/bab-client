@@ -25,7 +25,7 @@ const Button = ({
   return (
     <button
       type={isSubmit ? BtnType.Submit : BtnType.Button}
-      className={`button ${animScale ? "active" : ""} ${
+      className={`button ${animScale && !disabled ? "active" : ""} ${
         disabled ? "disabled" : ""
       }`}
       disabled={disabled}

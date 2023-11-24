@@ -18,7 +18,7 @@ const CartDetails = ({
   product: IProduct;
   quantity: number;
 }) => {
-  const { id: productId, title, image, price } = product;
+  const { id: productId, title, image, price, amount } = product;
 
   const { modifyCartData } = useCartData();
 
@@ -43,7 +43,11 @@ const CartDetails = ({
             <h2>{title}</h2>
           </div>
           <div className="cart__product__footer">
-            <CartQuantityInstant productId={productId} quantity={quantity} />
+            <CartQuantityInstant
+              productId={productId}
+              amount={amount}
+              quantity={quantity}
+            />
             <div className="cart__product__price">
               <h3>Price: {(Number(price) * quantity).toFixed(2)}$</h3>
             </div>
