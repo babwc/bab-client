@@ -47,7 +47,7 @@ const ModifierDetails = ({
           </div>
           <div className="modifier-details__order-btn">
             <Button
-              disabled={true}
+              disabled={!!storage.getItem(id)}
               // disabled={!!storage.getItem(id)}
               handleClick={() => {
                 modifyCartData(() => {
