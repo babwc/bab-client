@@ -1,29 +1,38 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import Button from "../../../components/Button";
 
 import "./CafeIntro.scss";
 
 const CafeIntro = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="cafe">
-      <div className="cafe-intro">
-        <Link to={"/menu"}>
-          <div className="cafe-intro__body">
-            <h1 className="cafe-intro__label">Cafe</h1>
-            <div className="cafe-intro__btn">
-              <h1>Cafe</h1>
-            </div>
+      <div className="cafe__intro">
+        <div className="cafe__details">
+          <div className="cafe__title">
+            <h1>Cafe</h1>
           </div>
-        </Link>
-      </div>
-      <div className="cafe-intro">
-        <Link to={"/banquet"}>
-          <div className="cafe-intro__body">
-            <h1 className="cafe-intro__label">Banquet</h1>
-            <div className="cafe-intro__btn">
-              <h1>Banquet</h1>
-            </div>
+          <div className="cafe__hours">
+            <h2>Hours: Tue – Sat: 11 am – 4:00 pm</h2>
           </div>
-        </Link>
+          {/* <div className="cafe__descr">
+            <h3></h3>
+          </div> */}
+          <div className="cafe__btn">
+            <Button
+              additionalStyle={{
+                height: "50px",
+                width: "120px",
+                fontSize: "17px",
+              }}
+              handleClick={() => navigate("/menu")}
+            >
+              Menu
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );

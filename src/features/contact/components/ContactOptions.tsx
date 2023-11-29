@@ -33,7 +33,9 @@ const ContactOptions = () => {
             <h1>Phone</h1>
           </div>
           <div className="contact__options__value">
-            <h4>(925) 210-0779</h4>
+            <h4>
+              <a href="tel:9252100779">(925) 210-0779</a>
+            </h4>
           </div>
         </li>
         <li>
@@ -41,7 +43,11 @@ const ContactOptions = () => {
             <h1>Mail</h1>
           </div>
           <div className="contact__options__value">
-            <h4>info@babushkamarket.com</h4>
+            <h4>
+              <a href="mailto:info@babushkamarket.com">
+                info@babushkamarket.com
+              </a>
+            </h4>
           </div>
         </li>
       </ul>

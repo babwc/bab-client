@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./styles.scss";
 
 interface Content {
+  id: string;
   title: string;
   image: string;
   description: string;
@@ -22,36 +23,31 @@ const Bubbles = ({
   return (
     <div className="bubbles">
       <div className="bubbles__body">
-        {content.map(
-          ({ title, image, description, page, passTitle }, i: number) => {
-            return (
-              <div
-                key={i}
-                className="bubbles__details"
-                onClick={
-                  clickable
-                    ? () =>
-                        navigate(
-                          `/${page}`,
-                          passTitle ? { state: { title } } : {}
-                        )
-                    : undefined
-                }
-              >
-                <img
-                  src={require(`../../assets/images/${image}`)}
-                  alt={title}
-                />
-                <div className="bubbles_details__title">
-                  <h1>{title}</h1>
-                </div>
-                <div className="bubbles__details__shadow">
-                  {description ? <p>{description}</p> : null}
-                </div>
+        {content.map(({ id, title, image, description, page, passTitle }) => {
+          return (
+            <div
+              key={id}
+              className="bubbles__details"
+              onClick={
+                clickable
+                  ? () =>
+                      navigate(
+                        `/${page}`,
+                        passTitle ? { state: { title } } : {}
+                      )
+                  : undefined
+              }
+            >
+              <img src={require(`../../assets/images/${image}`)} alt={title} />
+              <div className="bubbles_details__title">
+                <h1>{title}</h1>
               </div>
-            );
-          }
-        )}
+              <div className="bubbles__details__shadow">
+                {description ? <p>{description}</p> : null}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

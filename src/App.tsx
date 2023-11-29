@@ -69,16 +69,16 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/market" element={<Market />} />
+            {/* <Route path="/market" element={<Market />} /> */}
             <Route path="/cafe" element={<Cafe />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/banquet" element={<Banquet />} />
             <Route path="/success" element={<Success />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/product/:id">
+            {/* <Route path="/product/:id">
               <Route path=":slug" element={<Product />} />
               <Route path="" element={<Product />} />
-            </Route>
+            </Route> */}
             <Route path="/catering" element={<Catering />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

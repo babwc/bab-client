@@ -19,13 +19,13 @@
   width: 90%;
   margin: 10px auto;
   display: grid;
-  grid-template-columns: repeat(3, 350px);
-  gap: 50px;
+  grid-template-columns: repeat(4, 300px);
+  gap: 30px;
   justify-content: center;
 }
 
 .bubbles__details {
-  height: 350px;
+  height: 300px;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -33,6 +33,7 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   img {
     height: 100%;
     width: 100%;

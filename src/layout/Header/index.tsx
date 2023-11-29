@@ -3,9 +3,7 @@ import { NavLink } from "react-router-dom";
 import Nav from "./Nav";
 
 import CartDataNav from "./CartDataNav";
-import Reserve from "./Reserve";
 
-import IBab from "../../assets/main-icon.gif";
 import IBabSmall from "../../assets/main-icon-small.svg";
 
 import "./style.scss";
@@ -15,13 +13,16 @@ const Header = () => {
     <header className="main-header">
       <NavLink to="/">
         <div className="main-icon">
-          <img className="main-icon__small" src={IBabSmall} alt="Babushka" />
-          <img className="main-icon__large" src={IBab} alt="Babushka" />
+          {/* <img className="main-icon__small" src={IBabSmall} alt="Babushka" />
+          <img className="main-icon__large" src={IBab} alt="Babushka" /> */}
+          <div className="main-icon__img">
+            <img src={IBabSmall} />
+          </div>
+          <h3>Babushka Market</h3>
         </div>
       </NavLink>
       <div className="main-header__right">
         <Nav />
-        <Reserve />
         <CartDataNav />
       </div>
     </header>

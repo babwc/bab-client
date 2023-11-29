@@ -1,6 +1,10 @@
 .contact__options {
   width: 100%;
   padding: 15px 0;
+  a {
+    text-decoration: none;
+    color: #666;
+  }
   ul {
     height: 100%;
     width: 100%;

@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 
 import Intro from "./Intro";
-import Description from "./Description";
+import About from "./About";
 import Bubbles from "../../../components/Bubbles";
 
 import { directions } from "../constants";
@@ -48,8 +48,8 @@ export const HomeContainer = () => {
       ) : null}
       <>
         <Intro />
-        <Description />
-        <Bubbles clickable={true} content={directions} />
+        <About />
+        {/* <Bubbles clickable={true} content={directions} /> */}
       </>
     </>
   );
