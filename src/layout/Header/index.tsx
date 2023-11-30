@@ -23,7 +23,7 @@ const Header = () => {
       </NavLink>
       <div className="main-header__right">
         <Nav />
-        <CartDataNav />
+        {/* <CartDataNav /> */}
       </div>
     </header>
   );
