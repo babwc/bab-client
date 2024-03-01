@@ -25,7 +25,7 @@ const ContactOptions = () => {
             <h1>Address</h1>
           </div>
           <div className="contact__options__value">
-            <h4>1475 Newell Avenue Walnut Creek, CA, 94521</h4>
+            <h4>1475 Newell Avenue Walnut Creek, CA, 94596</h4>
           </div>
         </li>
         <li>
